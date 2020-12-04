@@ -11,8 +11,6 @@ console.log('Lection 6 - Object');
  * - Копирование по ссылке
  * - Сравнение объектов
  * - Клонирование объектов
- * - Object.values(), Object.keys(), Object.entries()
- * - Создание объекта
  */
 
 //
@@ -88,40 +86,6 @@ console.log('Lection 6 - Object');
 
 // ----
 
-// const user = {
-  // 'status': true,
-  // [key]: 'John',
-  // [1 + 20]: 'test',
-// };
-// console.log(user);
-// user.someValue = 'test';
-// user[1 + 20] = 'test';
-// console.log(user);
-// const user = {
-//   id: 1,
-  // name: 'John'
-// };
-
-// const key = 'name';
-// const str = ' test';
-// const name = 'John';
-// const user = {
-  // [key]: name,
-// };
-// const user = {
-  // [key + str]: name,
-// };
-// console.log(user);
-
-// const someArr = [1, 2, 3];
-// console.log(typeof someArr.toString());
-// console.log(someArr.toString());
-// const obj = {
-//   [someArr]: 26,
-//   [true]: 12,
-// };
-// console.log(obj);
-
 // ! Доступ к свойствам объекта
 // const user = {
 //   'id': 1,
@@ -146,16 +110,16 @@ console.log('Lection 6 - Object');
 // console.log(user.cart.items[0].price);
 // console.log(user.some property); // Don't work
 // console.log(user['some property']);
-const userCollection = [ // Collection
-  {
-    id: 1,
-    name: 'John',
-  },
-  {
-    id: 2,
-    name: 'James',
-  },
-];
+// const userCollection = [ // Collection
+//   {
+//     id: 1,
+//     name: 'John',
+//   },
+//   {
+//     id: 2,
+//     name: 'James',
+//   },
+// ];
 
 // console.log(userCollection[1].name);
 
@@ -224,23 +188,6 @@ const userCollection = [ // Collection
 
 // ---
 
-// user.name = 'John';
-
-// console.log('name' in user);
-// console.log('some value' in user);
-
-// document.write(user.name);
-// if ('name' in user) {
-//   document.write(user.name);
-// }
-
-// console.log(user.name);
-// console.log(user.name === undefined);
-// console.log('name' in user);
-// console.log('age' in user);
-// const propertyName = 'age';
-// console.log(propertyName in user);
-
 // ! Цикл for in
 
 // const user = {
@@ -299,30 +246,6 @@ const userCollection = [ // Collection
 
 // console.log(Object.getOwnPropertyNames(cat));
 
-// ------
-
-// for (let propertyName in cat) {
-//   // if (propertyName in cat) {
-//   //   console.log(propertyName, cat[propertyName]);
-//   // }
-//   // console.log(propertyName, cat[propertyName]);
-//   // if (cat.hasOwnProperty(propertyName)) {
-//   //   console.log(propertyName, cat[propertyName]);
-//   // }
-//   console.log(propertyName, cat.hasOwnProperty(propertyName));
-//   if (cat.hasOwnProperty(propertyName)) {
-//     console.log(propertyName, cat[propertyName]);
-//   }
-// }
-// for (let name in cat) {
-//   console.log(name);
-//   if (cat.hasOwnProperty(name)) {
-//     console.log(name);
-//   }
-// }
-
-// console.log(Object.getOwnPropertyNames(cat));
-
 // ! Копирование по ссылке
 
 
@@ -336,10 +259,10 @@ const userCollection = [ // Collection
 // console.log(anotherVar);
 
 // 1
-'initial'  |  'initial'
+// 'initial'  |  'initial'
 // 'initial' | 'anotherValue'
 // 2
-'anotherVar' |  'initial'
+// 'anotherVar' |  'initial'
 // initialVar   |  anotherVar
 
 // const user = {
@@ -389,68 +312,6 @@ const userCollection = [ // Collection
 
 // console.log(obj === anotherObj);
 // console.log({} === {});
-// ---------
-
-// const user1 = {
-//   name: 'John',
-// };
-
-// const user2 = {
-//   name: 'John',
-// };
-
-// console.log(user1 === user2);
-
-// const user3 = user1;
-// console.log(user1 === user3);
-
-// console.log({} === {});
-// console.log({} == {});
-// user2 = user1;
-// console.log(user2 === user1);
-
-// Поведение у == и === для объектов одинаковое
-// console.log({} === {});
-
-// const user = {
-//   name: 'John'
-// };
-
-// user.age = 25;
-// console.log(user);
-// // const user = {};
-// let obj = {
-//   a: 1
-// };
-// obj = {
-//   b: 2
-// }
-// console.log(obj);
-
-// const user1 = {
-//   name: 'John',
-//   age: 25,
-//   cart: {},
-// };
-
-// const user2 = {
-//   name: 'John',
-//   age: 25,
-//   valid: true,
-// };
-
-// let theSame = true;
-// for (let propertyName in user1) {
-//   if (!user2.hasOwnProperty(propertyName)) {
-//     theSame = false;
-//     break;
-//   }
-//   if (user1[propertyName] !== user2[propertyName]) {
-//     theSame = false;
-//     break;
-//   }
-// }
-// console.log(theSame);
 
 // ! Клонирование объектов
 
@@ -470,37 +331,6 @@ const userCollection = [ // Collection
 // console.log(obj === copy);
 
 // console.log(obj.name === copy.name);
-// ---
-
-// obj.test = 'test';
-// console.log(copy);
-
-// const obj = {
-//   age: 25,
-//   name: 'John',
-//   cart: {
-//     items: 2,
-//   }
-// };
-
-// const copy = {};
-// for (let propertyName in obj) {
-//   if (obj.hasOwnProperty(propertyName)) {
-//     copy[propertyName] = obj[propertyName];
-//   }
-// }
-
-//1 
-// propertyName = 'age'
-// obj[propertyName] === 25
-// copy[propertyName] = obj[propertyName];
-// 2
-// ptopertyName = 'name'
-
-// console.log(copy);
-// obj.cart.items = 3;
-// console.log(obj);
-// console.log(copy);
 
 // * Object.assign(target, ...sources)
 // https://caniuse.com/#search=object.assign
@@ -537,55 +367,4 @@ const userCollection = [ // Collection
 // console.log(copy);
 // console.log(copy.cart === obj.cart);
 
-// const anotherObj = {
-//   test: '1',
-//   obj: {}
-// }
 
-// const copy = {};
-// Object.assign(copy, obj, anotherObj);
-// console.log(copy);
-
-// console.log(copy.obj === anotherObj.obj);
-
-// Object.assign(copy, obj, anotherObj);
-// console.log(copy);
-/// ====
-// const copy = Object.assign({}, obj);
-
-
-// ! Object.values(), Object.keys(), Object.entries()
-// https://caniuse.com/#search=object.values
-// const user = {
-//   'id': 1,
-//   'name': 'John',
-//   'age': 32,
-//   'cart': {
-//     'date': '2020-03-01',
-//     'items': [
-//       {
-//         'id': 56,
-//         'name': 'Car',
-//         'price': 35,
-//       },
-//     ],
-//   }, 
-//   '0': 'some string',
-// };
-// console.log(Object.keys(user));
-// console.log(Object.values(user));
-// console.log(Object.entries(user));
-
-// ! Создание объекта
-
-// const literalObject = {};
-
-// const constructorObject = new Object();
-
-// const objectCreate = Object.create({a: 2});
-// console.log(objectCreate);
-
-// function User() {};
-// const user = new User();
-// console.log(typeof user);
-// console.log(typeof User);
