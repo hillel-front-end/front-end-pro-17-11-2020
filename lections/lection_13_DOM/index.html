@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lection 13 - DOM</title>
+  <style>
+    .btn-active {
+      background-color: blue;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lection 13 - DOM</h1>
+  <!-- <div>
+    textNode
+    <button id="btn" class="btn-info btn-active">click me!</button>
+    <button id="save" class="btn-info">save!</button>
+    <div>
+      <button>
+        inner text
+      </button>
+      <a href="https://google.com"></a>
+    </div>
+  </div>
+  <script src="main.js"></script> -->
+  <style>
+    .container {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      position: relative;
+    }
+    .block {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .block-red {
+      background-color: red;
+    }
+    .block-blue {
+      background-color: blue;
+    }
+    .block-green {
+      background-color: green;
+    }
+  </style>
+  <div class="container">
+    <div class="block block-red"></div>
+    <div class="block block-blue"></div>
+    <div class="block block-green"></div>
+  </div>
+  <script src="practice.js"></script>
+</body>
+</html>
