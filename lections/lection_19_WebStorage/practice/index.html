@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <style>
+    .container {
+      width: 560px;
+      margin: 0 auto;
+    }
+    .messages {
+      border: 1px solid black;
+      padding: 12px;
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+    .messages > div {
+      padding: 6px 0;
+    }
+    .messages > div:not(:last-child) {
+      border-bottom: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="messages" id='messages'>
+    </div>
+    <div>
+      <textarea id="msg"></textarea>
+      <button id="send">Send</button>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
