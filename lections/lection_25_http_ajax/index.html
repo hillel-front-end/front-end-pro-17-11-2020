@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lection 25: HTTP. AJAX</title>
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lection 25: HTTP. AJAX</h1>
+
+  <form method="GET" action="/">
+    <input name="name">
+    <input name="surname">
+    <input type="file">
+    <input type="submit" value="submit">
+  </form>
+
+  <form method="POST" action="/">
+    <input name="email">
+    <input name="password">
+    <input type="submit" value="submit">
+  </form>
+
+  <button type="button">Load data</button>
+
+  <div id="spinner" class="hide">Loading...</div>
+  <ul id="cities"></ul>
+  <script src="app.js"></script>
+</body>
+</html>
